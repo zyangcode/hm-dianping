@@ -57,6 +57,10 @@
             <artifactId>hutool-all</artifactId>
             <version>5.8.22</version> <!-- 用一个稳定版 -->
         </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

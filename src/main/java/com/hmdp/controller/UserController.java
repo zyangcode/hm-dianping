@@ -64,6 +64,7 @@ public class   UserController {
 
     @GetMapping("/me")
     public Result me(){
+        log.info("UserController me");
         UserDTO user = UserHolder.getUser();
         return Result.ok(user);
     }
