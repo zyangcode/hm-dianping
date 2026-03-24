@@ -9,7 +9,7 @@ import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 
 @Component
-public class RedisIdWorker {
+public class  RedisIdWorker {
     private static final long COUNT_BITS = 32;
     @Resource
     private StringRedisTemplate stringRedisTemplate;
