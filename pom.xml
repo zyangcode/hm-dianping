@@ -17,9 +17,34 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+        <!-- 排除原有 Redis 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-data-redis</artifactId>
+                    <groupId>org.springframework.data</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>lettuce-core</artifactId>
+                    <groupId>io.lettuce</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- 手动指定 spring-data-redis 版本 -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+
+        <!-- 手动指定 Letture 版本 -->
+        <dependency>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>6.1.6.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
